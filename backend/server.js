@@ -10,6 +10,7 @@ import connectDB from './config/db.js'
 import errorHandler from './middleware/errorHandler.js'
 import authRoutes from './routes/auth.routes.js';
 import documentRoutes from './routes/document.routes.js';
+import flashcardRoutes from './routes/flashcard.routes.js'
 
 
 //ES6 module __dirname alternative
@@ -40,6 +41,7 @@ app.use('/uploads', express.static(path.join(__dirname, 'uploads')))
 //Routes
 app.use('/api/auth', authRoutes)
 app.use('/api/documents', documentRoutes)
+app.use('/api/flascards', flashcardRoutes)
 
 app.use(errorHandler)
 
