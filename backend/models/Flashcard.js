@@ -34,7 +34,7 @@ const flashcardSchema = new mongoose.Schema({
                 type: Number,
                 default: 0
             },
-            isStarted: {
+            isStarred: {
                 type: Boolean,
                 default: false
             }
