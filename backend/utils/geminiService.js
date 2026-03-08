@@ -3,7 +3,7 @@ import { GoogleGenAI } from '@google/genai';
 
 dotenv.config();
 
-const ai = GoogleGenAI({apiKey: process.env.GEMINI_API_KEY})
+const ai = new GoogleGenAI({apiKey: process.env.GEMINI_API_KEY})
 
 if(!process.env.GEMINI_API_KEY){
     console.error('FATAL ERROR: GEMINI_API_KEY is not set in the environment variables')
